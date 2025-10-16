@@ -14,3 +14,8 @@ spring:
               uri: http://localhost:8765
               predicates:
                 - Path=/hello
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty: DEBUG
+    org.springframework.web.reactive: DEBUG
