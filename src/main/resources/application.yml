@@ -1,0 +1,16 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: only-apigateway-service
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: hello_route
+              uri: http://localhost:8765
+              predicates:
+                - Path=/hello
